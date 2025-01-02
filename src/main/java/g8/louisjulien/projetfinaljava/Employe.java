@@ -53,7 +53,5 @@ public class Employe {
         this.Nom = newNom;
         this.DateEmbauche = newDateEmbauche;
     }
-
-
 }
 

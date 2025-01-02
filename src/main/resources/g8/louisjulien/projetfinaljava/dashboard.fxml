@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="g8.louisjulien.projetfinaljava.Dashboard">
+    <top>
+        <Label text="Application de gestion collaborative" style="-fx-font-size: 24px; -fx-padding: 10;" />
+    </top>
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+            <Button text="Gestion des employés" fx:id="btnEmployes" onAction="#ouvrirGestionEmployes" />
+            <Button text="Gestion des projets" fx:id="btnProjets" onAction="#ouvrirGestionProjets" />
+            <Button text="Gestion des tâches" fx:id="btnTaches" onAction="#ouvrirGestionTaches" />
+        </VBox>
+    </center>
+</BorderPane>
