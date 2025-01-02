@@ -28,10 +28,30 @@ public class Employe {
         return null;
     }
 
+    public void obtenirInfos() {
+        System.out.println(this.getNom() + this.getDateEmbauche());
+    }
+
+
+
+    public void historique() {
+        System.out.println("Historique des tâches de " + this.getNom() + " :\n");
+        for (Projet projet : this.getProjets()) {
+            if (projet.getEtat()) {
+                System.out.println("PROJET " + projet.getTitre());
+                for (Tache tache : this.getTaches(projet)) {
+                    System.out.println("\t" + tache.toString());
+                }
+            }
+        }
+        System.out.println("\n\n");
+    }
 
     public void modifierEmploye(String newNom, LocalDateTime newDateEmbauche) {
         this.Nom = newNom;
         this.DateEmbauche = newDateEmbauche;
     }
+
+
 }
 
