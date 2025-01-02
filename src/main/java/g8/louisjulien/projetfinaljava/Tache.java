@@ -1,3 +1,5 @@
+package g8.louisjulien.projetfinaljava;
+
 import java.util.ArrayList;
 
 public class Tache {
