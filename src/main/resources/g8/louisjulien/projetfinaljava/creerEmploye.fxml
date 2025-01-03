@@ -7,17 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.CreerEmploye">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.CreerEmploye">
    <children>
-      <Label layoutX="206.0" layoutY="14.0" text="Créer un employé">
+      <Label layoutX="123.0" layoutY="14.0" text="Créer un employé">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="Nom" layoutX="58.0" layoutY="100.0" text="Nom" />
-      <DatePicker fx:id="dateEmbauche" layoutX="46.0" layoutY="175.0" />
-      <Label layoutX="86.0" layoutY="142.0" text="Date d'embauche" />
-      <Button layoutX="274.0" layoutY="221.0" mnemonicParsing="false" onAction="#Valider" text="Valider" />
+      <TextField fx:id="Nom" layoutX="127.0" layoutY="68.0" prefHeight="25.0" prefWidth="174.0" promptText="Nom" />
+      <DatePicker fx:id="dateEmbauche" layoutX="127.0" layoutY="104.0" prefHeight="25.0" prefWidth="174.0" promptText="Date d'embauche" />
+      <Button layoutX="149.0" layoutY="150.0" mnemonicParsing="false" onAction="#Valider" text="Valider" />
+      <Button layoutX="226.0" layoutY="150.0" mnemonicParsing="false" onAction="#Annuler" text="Annuler" />
    </children>
 </AnchorPane>

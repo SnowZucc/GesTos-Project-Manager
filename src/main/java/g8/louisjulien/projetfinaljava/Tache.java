@@ -10,6 +10,7 @@ public class Tache {
     private String Priorite; // Prioritaire, Urgent, Secondaire, Non Urgent
     public Projet projet;
     private ArrayList<Employe> ListeEmploye;
+
     public Tache(String titre, String description, String Priorite) {
         this.Titre = titre;
         this.Description = description;

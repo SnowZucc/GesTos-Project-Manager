@@ -9,10 +9,12 @@ public class Employe {
     private String Nom;
     private LocalDateTime DateEmbauche;
     private HashMap<Projet, List<Tache>> listeRoles;
+
     public Employe(String nom, LocalDateTime dateEmbauche) {
         Nom = nom;
         DateEmbauche = dateEmbauche;
     }
+
     public String getNom() {
         return Nom;
     }
