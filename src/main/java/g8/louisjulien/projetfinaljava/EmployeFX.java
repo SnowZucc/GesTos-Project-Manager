@@ -48,7 +48,7 @@ public class EmployeFX {
 
     @FXML
     private void modifierEmploye(ActionEvent event) {
-        // Code pour modifier l'employé sélectionné
+        changerScene(event, "modifierEmploye.fxml");
     }
 
     @FXML

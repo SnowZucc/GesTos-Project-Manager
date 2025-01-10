@@ -60,9 +60,9 @@ public class Employe {
         System.out.println("\n\n");
     }
 
-    public void modifierEmploye(String newNom, LocalDateTime newDateEmbauche) {
-        this.Nom = newNom;
-        this.DateEmbauche = newDateEmbauche;
+    public static void modifierEmploye(Employe employe, String newNom, LocalDateTime newDateEmbauche) {
+        employe.Nom = newNom;
+        employe.DateEmbauche = newDateEmbauche;
     }
 }
 
