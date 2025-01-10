@@ -3,11 +3,13 @@ package g8.louisjulien.projetfinaljava;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Projet {
     private String Titre;
     public boolean Etat;
     public int completion = 0;
+    private static List<Projet> ListeProjets = new ArrayList<>();
     private ArrayList<Tache> ListeTache = new ArrayList<>();
     private ArrayList<Employe> ListeEmploye = new ArrayList<>();
     private LocalDate Deadline;
@@ -15,9 +17,13 @@ public class Projet {
         this.Titre = Titre;
         this.Etat = false;
         this.Deadline = Deadline;
+
+        ListeProjets.add(this);
     }
 
-
+    public static List<Projet> getListeProjets() {
+        return ListeProjets;
+    }
     public String getTitre() {
         return Titre;
     }

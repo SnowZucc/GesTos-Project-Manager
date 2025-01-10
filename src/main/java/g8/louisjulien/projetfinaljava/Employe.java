@@ -38,7 +38,7 @@ public class Employe {
         return null;
     }
 
-    public static List<Employe> getEmployes() {
+    public static List<Employe> getEmployes() {     // Retourne la liste des employés "employes"
         return employes;
     }
 

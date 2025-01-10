@@ -16,7 +16,7 @@ public class Dashboard {
 
     @FXML
     private void ouvrirGestionProjets(ActionEvent event) {
-        changerScene(event, "gestionProjets.fxml");
+        changerScene(event, "/g8/louisjulien/projetfinaljava/projets.fxml");
     }
 
     @FXML
