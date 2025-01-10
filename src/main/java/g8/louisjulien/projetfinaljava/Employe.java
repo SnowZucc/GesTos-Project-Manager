@@ -16,6 +16,7 @@ public class Employe {
     public Employe(String nom, LocalDateTime dateEmbauche) {
         Nom = nom;
         DateEmbauche = dateEmbauche;
+        listeRoles = new HashMap<>();
 
         employes.add(this);
     }
@@ -47,17 +48,18 @@ public class Employe {
 
 
 
-    public void historique() {
-        System.out.println("Historique des tâches de " + this.getNom() + " :\n");
+    public List<String[]> getHistorique() {     // Modification pour retourner une liste
+        List<String[]> historiqueList = new ArrayList<>();
+
         for (Projet projet : this.getProjets()) {
             if (projet.getEtat()) {
-                System.out.println("PROJET " + projet.getTitre());
                 for (Tache tache : this.getTaches(projet)) {
-                    System.out.println("\t" + tache.toString());
+                    historiqueList.add(new String[]{projet.getTitre(), tache.toString()});
                 }
             }
         }
-        System.out.println("\n\n");
+        System.out.println(historiqueList);
+        return historiqueList;
     }
 
     public static void modifierEmploye(Employe employe, String newNom, LocalDateTime newDateEmbauche) {

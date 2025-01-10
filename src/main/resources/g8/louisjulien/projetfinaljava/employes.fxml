@@ -8,15 +8,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.EmployeFX">
    <children>
-      <Button layoutX="93.0" layoutY="75.0" mnemonicParsing="false" onAction="#creerEmploye" text="Créer un employé" />
+      <Button layoutX="35.0" layoutY="75.0" mnemonicParsing="false" onAction="#creerEmploye" text="Créer un employé" />
       <Label layoutX="174.0" layoutY="14.0" style="-fx-font-size: 24px; -fx-padding: 10;" text="Gestion des employés" />
-      <TableView fx:id="tableEmployes" layoutX="93.0" layoutY="109.0" prefHeight="229.0" prefWidth="414.0">
+      <TableView fx:id="tableEmployes" layoutX="93.0" layoutY="124.0" prefHeight="229.0" prefWidth="414.0">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="75.0" text="Nom" />
           <TableColumn fx:id="colDateEmbauche" prefWidth="109.0" text="Date d'embauche" />
         </columns>
       </TableView>
-      <Button layoutX="109.0" layoutY="355.0" mnemonicParsing="false" onAction="#modifierEmploye" text="Modifier cet employé" />
-      <Button layoutX="348.0" layoutY="355.0" mnemonicParsing="false" onAction="#supprimerEmploye" text="Supprimer cet employé" />
+      <Button layoutX="181.0" layoutY="75.0" mnemonicParsing="false" onAction="#modifierEmploye" text="Modifier un employé" />
+      <Button layoutX="337.0" layoutY="75.0" mnemonicParsing="false" onAction="#supprimerEmploye" text="Supprimer un employé" />
+      <Button layoutX="507.0" layoutY="75.0" mnemonicParsing="false" onAction="#afficherHistorique" text="Historique" />
    </children>
 </AnchorPane>

@@ -48,7 +48,7 @@ public class EmployeFX {
 
     @FXML
     private void modifierEmploye(ActionEvent event) {
-        changerScene(event, "modifierEmploye.fxml");
+        ouvrirNouvelleFenetre("modifierEmploye.fxml");
     }
 
     @FXML
@@ -60,6 +60,11 @@ public class EmployeFX {
         }
     }
 
+    @FXML
+    private void afficherHistorique() {
+        ouvrirNouvelleFenetre("Historique.fxml");
+    }
+
     private void changerScene(ActionEvent event, String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -67,6 +72,20 @@ public class EmployeFX {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void ouvrirNouvelleFenetre(String fxmlFile) {
+        try {
+            // Charger le fichier FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            Scene scene = new Scene(loader.load());
+
+            Stage newStage = new Stage();
+            newStage.setScene(scene);
+            newStage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
