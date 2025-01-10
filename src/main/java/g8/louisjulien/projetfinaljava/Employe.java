@@ -1,6 +1,7 @@
 package g8.louisjulien.projetfinaljava;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -10,9 +11,13 @@ public class Employe {
     private LocalDateTime DateEmbauche;
     private HashMap<Projet, List<Tache>> listeRoles;
 
+    private static List<Employe> employes = new ArrayList<>();
+
     public Employe(String nom, LocalDateTime dateEmbauche) {
         Nom = nom;
         DateEmbauche = dateEmbauche;
+
+        employes.add(this);
     }
 
     public String getNom() {
@@ -30,6 +35,10 @@ public class Employe {
         }
         System.out.println("L'employé " + this.getNom() + " ne participe pas au projet " + projet.getTitre());
         return null;
+    }
+
+    public static List<Employe> getEmployes() {
+        return employes;
     }
 
     public void obtenirInfos() {

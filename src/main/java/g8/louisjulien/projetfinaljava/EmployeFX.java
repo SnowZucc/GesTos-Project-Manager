@@ -12,7 +12,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class EmployeFX {
     @FXML
@@ -22,9 +23,9 @@ public class EmployeFX {
     private TableColumn<Employe, String> colNom;
 
     @FXML
-    private TableColumn<Employe, LocalDate> colDateEmbauche;
+    private TableColumn<Employe, LocalDateTime> colDateEmbauche;
 
-    private ObservableList<Employe> listeEmployes = FXCollections.observableArrayList();    // Permet de voir la selection de la table
+    private ObservableList<Employe> listeEmployes;
 
     @FXML
     public void initialize() {
@@ -32,6 +33,11 @@ public class EmployeFX {
         colNom.setCellValueFactory(new PropertyValueFactory<>("Nom"));
         colDateEmbauche.setCellValueFactory(new PropertyValueFactory<>("DateEmbauche"));
 
+        // Charger les employés dans l'ObservableList
+        List<Employe> employes = Employe.getEmployes();
+        listeEmployes = FXCollections.observableArrayList(employes);
+
+        // Définir les données dans le tableau
         tableEmployes.setItems(listeEmployes);
     }
 
@@ -42,12 +48,16 @@ public class EmployeFX {
 
     @FXML
     private void modifierEmploye(ActionEvent event) {
-
+        // Code pour modifier l'employé sélectionné
     }
 
     @FXML
     private void supprimerEmploye(ActionEvent event) {
-
+        Employe employeSelectionne = tableEmployes.getSelectionModel().getSelectedItem();
+        if (employeSelectionne != null) {
+            listeEmployes.remove(employeSelectionne);
+            Employe.getEmployes().remove(employeSelectionne);
+        }
     }
 
     private void changerScene(ActionEvent event, String fxmlFile) {
