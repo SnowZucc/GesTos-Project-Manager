@@ -59,10 +59,8 @@ public class ProjetsFX {
     @FXML
     private void supprimerProjet(ActionEvent event) {
         Projet projetSelectionne = tableProjets.getSelectionModel().getSelectedItem();
-        if (projetSelectionne != null) {
             listeProjets.remove(projetSelectionne);
             Projet.getListeProjets().remove(projetSelectionne);
-        }
     }
 
     @FXML

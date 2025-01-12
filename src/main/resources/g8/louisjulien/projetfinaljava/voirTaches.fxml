@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.VoirTachesFX">
-    <center>
-        <TableView fx:id="tableTaches" prefHeight="400.0" prefWidth="503.0">
-            <columns>
-                <TableColumn fx:id="colTitreTache" prefWidth="97.0" text="Titre" />
-                <TableColumn fx:id="colDescriptionTache" prefWidth="152.0" text="Description" />
-                <TableColumn fx:id="colStatutTache" prefWidth="75.0" text="Statut" />
-                <TableColumn fx:id="colPrioriteTache" prefWidth="74.0" text="Priorité" />
-            </columns>
-        </TableView>
-    </center>
-</BorderPane>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.VoirTachesFX">
+   <children>
+      <TableView fx:id="tableTaches" layoutY="57.0" prefHeight="302.0" prefWidth="503.0">
+         <columns>
+            <TableColumn fx:id="colTitreTache" prefWidth="97.0" text="Titre" />
+            <TableColumn fx:id="colDescriptionTache" prefWidth="240.0" text="Description" />
+            <TableColumn fx:id="colStatutTache" prefWidth="64.0" text="Statut" />
+            <TableColumn fx:id="colPrioriteTache" prefWidth="101.0" text="Priorité" />
+         </columns>
+      </TableView>
+      <ButtonBar layoutX="147.0" layoutY="359.0" prefHeight="40.0" prefWidth="175.0">
+        <buttons>
+            <Button mnemonicParsing="false" text="Modifier" />
+            <Button mnemonicParsing="false" onAction="#supprimerTache" text="Supprimer" />
+        </buttons>
+      </ButtonBar>
+      <Button layoutX="36.0" layoutY="20.0" mnemonicParsing="false" onAction="#creerTache" text="Ajouter une tâche" />
+   </children>
+</AnchorPane>
