@@ -18,6 +18,7 @@
         </columns>
       </TableView>
       <Button layoutX="219.0" layoutY="75.0" mnemonicParsing="false" onAction="#modifierProjet" text="Modifier un projet" />
-      <Button layoutX="364.0" layoutY="75.0" mnemonicParsing="false" onAction="#supprimerProjet" text="Supprimer un projet" />
+      <Button layoutX="300.0" layoutY="361.0" mnemonicParsing="false" onAction="#supprimerProjet" text="Supprimer ce projet" />
+      <Button layoutX="143.0" layoutY="361.0" mnemonicParsing="false" onAction="#voirTaches" text="Voir les tâches" />
    </children>
 </AnchorPane>

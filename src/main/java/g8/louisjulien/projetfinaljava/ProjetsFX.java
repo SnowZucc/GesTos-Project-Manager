@@ -65,6 +65,24 @@ public class ProjetsFX {
         }
     }
 
+    @FXML
+    private void voirTaches(ActionEvent event) {
+        Projet projetSelectionne = tableProjets.getSelectionModel().getSelectedItem();
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("voirTaches.fxml"));
+                Scene scene = new Scene(loader.load());
+
+                VoirTachesFX controller = loader.getController();   // Récupère le contrôleur de la fenêtre des tâches
+                controller.setProjet(projetSelectionne); // Passe le projet sélectionné au contrôleur
+
+                Stage newStage = new Stage();
+                newStage.setScene(scene);
+                newStage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
+
     private void changerScene(ActionEvent event, String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
