@@ -64,4 +64,8 @@ public class Projet {
         tache.projet = this;
         this.ListeTache.add(tache);
     }
+
+    public void supprimerTacheProjet(Tache tache) {     // Supprimer une tache de la liste privée de taches du projet
+        ListeTache.remove(tache);
+    }
 }

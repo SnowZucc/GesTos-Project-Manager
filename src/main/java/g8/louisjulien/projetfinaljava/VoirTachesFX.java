@@ -63,7 +63,7 @@ public class VoirTachesFX {
     private void supprimerTache(ActionEvent event) {
         Tache tacheSelectionne = tableTaches.getSelectionModel().getSelectedItem();
         System.out.println(tacheSelectionne);
-        tacheSelectionne.supprimerTache();
+        projetSelectionne.supprimerTacheProjet(tacheSelectionne);
         System.out.println(projetSelectionne.getTaches());
         tableTaches.setItems(FXCollections.observableArrayList(projetSelectionne.getTaches()));
     }

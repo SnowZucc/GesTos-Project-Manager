@@ -121,6 +121,4 @@ public class Tache {
         this.Statut = "En attente";
         this.Priorite = newPriorite;
     }
-    public void supprimerTache() {}
-
 }
