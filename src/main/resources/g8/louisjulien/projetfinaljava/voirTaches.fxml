@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.VoirTachesFX">
    <children>
       <TableView fx:id="tableTaches" layoutY="57.0" prefHeight="302.0" prefWidth="503.0">
@@ -19,7 +18,7 @@
       </TableView>
       <ButtonBar layoutX="147.0" layoutY="359.0" prefHeight="40.0" prefWidth="175.0">
         <buttons>
-            <Button mnemonicParsing="false" text="Modifier" />
+            <Button mnemonicParsing="false" onAction="#modifierTache" text="Modifier" />
             <Button mnemonicParsing="false" onAction="#supprimerTache" text="Supprimer" />
         </buttons>
       </ButtonBar>

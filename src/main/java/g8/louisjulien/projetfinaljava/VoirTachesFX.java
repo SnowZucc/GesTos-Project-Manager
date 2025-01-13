@@ -24,6 +24,7 @@ public class VoirTachesFX {
     private TableColumn<Tache, Boolean> colPrioriteTache;
 
     private Projet projetSelectionne;
+    private Tache tacheSelectionnee;
 
     public void setProjet(Projet projet) {
         projetSelectionne = projet;
@@ -57,6 +58,21 @@ public class VoirTachesFX {
     @FXML
     private void modifierTache(ActionEvent event) {
         //changerScene(event, "modifierTache.fxml");
+        Tache tacheSelectionnee = tableTaches.getSelectionModel().getSelectedItem();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("modifierTache.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            ModifierTacheFX controller = loader.getController();   // Récupère le contrôleur de la fenêtre des tâches
+            controller.setTache(tacheSelectionnee); // Passe le projet sélectionné au contrôleur
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setOnHiding(e -> tableTaches.refresh());     // Rafraichit mais avec .refresh (ça marche pas avec setItems jsp pk)
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
