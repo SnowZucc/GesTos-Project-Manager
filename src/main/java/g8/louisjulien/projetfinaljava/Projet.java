@@ -51,7 +51,9 @@ public class Projet {
         projet.Titre = Titre;
         projet.Deadline = newDeadline;
     }
-    public void supprimerProjet() {}
+    public static void supprimerProjet(Projet projet) {
+        ListeProjets.remove(projet);
+    }
 
 
     public void attribuerRole(Employe employe, Tache tache) {

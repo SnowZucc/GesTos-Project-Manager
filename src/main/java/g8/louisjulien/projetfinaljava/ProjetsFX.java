@@ -79,7 +79,11 @@ public class ProjetsFX {
     private void supprimerProjet(ActionEvent event) {
         Projet projetSelectionne = tableProjets.getSelectionModel().getSelectedItem();
             listeProjets.remove(projetSelectionne);
-            Projet.getListeProjets().remove(projetSelectionne);
+//          Projet.getListeProjets().remove(projetSelectionne);
+            Projet.supprimerProjet(projetSelectionne);
+            listeProjets.clear();                                   // Rafraichir les données du tableau mais qui marche pour cette méthode
+            listeProjets.addAll(Projet.getListeProjets());
+            tableProjets.refresh();
     }
 
     @FXML
