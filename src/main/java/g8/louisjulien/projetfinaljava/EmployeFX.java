@@ -90,4 +90,9 @@ public class EmployeFX {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void Retour(ActionEvent event) {
+        changerScene(event, "dashboard.fxml");
+    }
 }

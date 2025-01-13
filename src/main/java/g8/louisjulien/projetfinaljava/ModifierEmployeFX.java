@@ -53,7 +53,8 @@ public class ModifierEmployeFX {
 
     @FXML
     private void Annuler(ActionEvent event) {
-        changerScene(event, "employes.fxml");
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Récupère la fenêtre courante
+        stage.close();
     }
 
     private void changerScene(ActionEvent event, String fxmlFile) {

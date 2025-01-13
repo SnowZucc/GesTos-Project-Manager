@@ -129,4 +129,9 @@ public class ProjetsFX {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void Retour(ActionEvent event) {
+        changerScene(event, "dashboard.fxml");
+    }
 }
