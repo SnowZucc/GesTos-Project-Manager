@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.VueKanbanFX">
+   <children>
+       <Label layoutX="460.0" style="-fx-font-size: 24px; -fx-padding: 10;" text="Vue Kanban" />
+      <HBox layoutX="12.0" layoutY="64.0" prefWidth="1052.0" spacing="20">
+         <children>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="245.0" text="En attente" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colEnAttente" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="249.0" text="En cours" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colEnCours" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="247.0" text="En Test">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colEnTest" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="247.0" text="Terminé">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colTermine" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

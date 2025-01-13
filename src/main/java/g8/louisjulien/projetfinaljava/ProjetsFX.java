@@ -96,9 +96,9 @@ public class ProjetsFX {
                 VoirTachesFX controller = loader.getController();   // Récupère le contrôleur de la fenêtre des tâches
                 controller.setProjet(projetSelectionne); // Passe le projet sélectionné au contrôleur
 
-                Stage newStage = new Stage();
-                newStage.setScene(scene);
-                newStage.show();
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();        // Change scène
+                stage.setScene(scene);
+                stage.show();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -111,20 +111,6 @@ public class ProjetsFX {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void ouvrirNouvelleFenetre(String fxmlFile) {
-        try {
-            // Charger le fichier FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Scene scene = new Scene(loader.load());
-
-            Stage newStage = new Stage();
-            newStage.setScene(scene);
-            newStage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }

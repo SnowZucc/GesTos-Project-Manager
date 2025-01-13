@@ -22,6 +22,8 @@
             <Button mnemonicParsing="false" onAction="#supprimerTache" text="Supprimer" />
         </buttons>
       </ButtonBar>
-      <Button layoutX="36.0" layoutY="20.0" mnemonicParsing="false" onAction="#creerTache" text="Ajouter une tâche" />
+      <Button layoutX="113.0" layoutY="18.0" mnemonicParsing="false" onAction="#creerTache" text="Ajouter une tâche" />
+      <Button layoutX="257.0" layoutY="14.0" mnemonicParsing="false" onAction="#vueKanban" prefHeight="34.0" prefWidth="134.0" text="Vue Kanban" />
+      <Button layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#Retour" text="(- Retour" />
    </children>
 </AnchorPane>

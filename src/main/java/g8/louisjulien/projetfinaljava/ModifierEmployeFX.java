@@ -35,7 +35,8 @@ public class ModifierEmployeFX {
         // Modifier l'employé
         Employe.modifierEmploye(employe, employeEcrit, dateTimeEmbauche);
         System.out.println("Employé modifié : " + employe.getNom() + " " + employe.getDateEmbauche());
-        changerScene(event, "employes.fxml");
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Récupère la fenêtre courante
+        stage.close();
     }
 
     private Employe trouverEmployeParNom(String nom) {

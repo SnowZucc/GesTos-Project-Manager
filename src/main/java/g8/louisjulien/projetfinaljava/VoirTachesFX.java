@@ -11,6 +11,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 public class VoirTachesFX {
     @FXML
     private TableView<Tache> tableTaches;
@@ -24,7 +26,6 @@ public class VoirTachesFX {
     private TableColumn<Tache, Boolean> colPrioriteTache;
 
     private Projet projetSelectionne;
-    private Tache tacheSelectionnee;
 
     public void setProjet(Projet projet) {
         projetSelectionne = projet;
@@ -84,6 +85,25 @@ public class VoirTachesFX {
         tableTaches.setItems(FXCollections.observableArrayList(projetSelectionne.getTaches()));
     }
 
+    @FXML
+    private void vueKanban(ActionEvent event) {
+        // Faire passer le projet
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("vueKanban.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            VueKanbanFX controller = loader.getController(); // Récupérer le contrôleur
+            controller.setProjet(projetSelectionne); // Passer le projet sélectionné au contrôleur
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setOnHiding(e -> tableTaches.refresh());     // Pareil rafraichit quand fermée
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private void changerScene(ActionEvent event, String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -94,5 +114,10 @@ public class VoirTachesFX {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void Retour(ActionEvent event) {
+        changerScene(event, "projets.fxml");
     }
 }

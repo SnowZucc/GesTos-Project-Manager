@@ -121,4 +121,9 @@ public class Tache {
         this.Statut = "En attente";
         this.Priorite = newPriorite;
     }
+
+    @Override
+    public String toString() {
+        return this.Titre;          // Renvoie le titre de la tache au lieu de g8.louisjulien.projetfinaljava.machin
+    }
 }
