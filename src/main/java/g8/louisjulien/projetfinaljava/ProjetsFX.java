@@ -53,7 +53,26 @@ public class ProjetsFX {
 
     @FXML
     private void modifierProjet(ActionEvent event) {
-        ouvrirNouvelleFenetre("modifierEmploye.fxml");
+        // Faire passer le projet comme dans VoirTachesFX
+        Projet projetSelectionne = tableProjets.getSelectionModel().getSelectedItem();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("modifierProjet.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            ModifierProjetFX controller = loader.getController(); // Récupérer le contrôleur
+            controller.setProjet(projetSelectionne); // Passer le projet sélectionné au contrôleur
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            stage.setOnHiding(e -> {
+                listeProjets.clear();                                   // Rafraichir les données du tableau mais qui marche pour cette méthode
+                listeProjets.addAll(Projet.getListeProjets());
+                tableProjets.refresh();
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

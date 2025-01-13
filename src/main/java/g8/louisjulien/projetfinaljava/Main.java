@@ -22,6 +22,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         Employe e1 = new Employe("Jean Marc", LocalDateTime.now());
         Employe e2 = new Employe("John Doe", LocalDateTime.now());

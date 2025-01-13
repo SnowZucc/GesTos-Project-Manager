@@ -47,9 +47,9 @@ public class Projet {
     }
 
 
-    public void modifierProjet(String Titre, LocalDate newDeadline) {
-        this.Titre = Titre;
-        this.Deadline = newDeadline;
+    public static void modifierProjet(Projet projet, String Titre, LocalDate newDeadline) {     // Je l'ai changé en static sinon on peux pas l'utiliser dehors
+        projet.Titre = Titre;
+        projet.Deadline = newDeadline;
     }
     public void supprimerProjet() {}
 
