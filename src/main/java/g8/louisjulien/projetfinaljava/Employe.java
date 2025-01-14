@@ -1,6 +1,6 @@
 package g8.louisjulien.projetfinaljava;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,12 +8,12 @@ import java.util.Set;
 
 public class Employe {
     private String Nom;
-    private LocalDateTime DateEmbauche;
+    private LocalDate DateEmbauche;
     private HashMap<Projet, List<Tache>> listeRoles;
 
     private static List<Employe> employes = new ArrayList<>();
 
-    public Employe(String nom, LocalDateTime dateEmbauche) {
+    public Employe(String nom, LocalDate dateEmbauche) {
         Nom = nom;
         DateEmbauche = dateEmbauche;
         listeRoles = new HashMap<>();
@@ -24,7 +24,7 @@ public class Employe {
     public String getNom() {
         return Nom;
     }
-    public LocalDateTime getDateEmbauche() {
+    public LocalDate getDateEmbauche() {
         return DateEmbauche;
     }
     public HashMap<Projet, List<Tache>> getListeRoles() {return listeRoles;}
@@ -64,7 +64,7 @@ public class Employe {
         return historiqueList;
     }
 
-    public static void modifierEmploye(Employe employe, String newNom, LocalDateTime newDateEmbauche) {
+    public static void modifierEmploye(Employe employe, String newNom, LocalDate newDateEmbauche) {
         employe.Nom = newNom;
         employe.DateEmbauche = newDateEmbauche;
     }
