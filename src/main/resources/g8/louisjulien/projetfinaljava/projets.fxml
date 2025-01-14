@@ -6,20 +6,20 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.ProjetsFX">
-   <children>
-      <Button layoutX="93.0" layoutY="75.0" mnemonicParsing="false" onAction="#creerProjet" text="Créer un projet" />
-      <Label layoutX="174.0" layoutY="14.0" style="-fx-font-size: 24px; -fx-padding: 10;" text="Gestion des projets" />
-      <TableView fx:id="tableProjets" layoutX="93.0" layoutY="124.0" prefHeight="229.0" prefWidth="414.0">
-        <columns>
-          <TableColumn fx:id="colTitre" prefWidth="75.0" text="Titre" />
-          <TableColumn fx:id="colEtat" prefWidth="109.0" text="Etat" />
-            <TableColumn fx:id="colDeadline" prefWidth="109.0" text="Deadline" />
-        </columns>
-      </TableView>
-      <Button layoutX="219.0" layoutY="75.0" mnemonicParsing="false" onAction="#modifierProjet" text="Modifier un projet" />
-      <Button layoutX="300.0" layoutY="361.0" mnemonicParsing="false" onAction="#supprimerProjet" text="Supprimer ce projet" />
-      <Button layoutX="143.0" layoutY="361.0" mnemonicParsing="false" onAction="#voirTaches" text="Voir les tâches" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Retour" text="(- Retour" />
-   </children>
-</AnchorPane>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g8.louisjulien.projetfinaljava.ProjetsFX">
+       <children>
+          <Button layoutX="93.0" layoutY="75.0" mnemonicParsing="false" onAction="#creerProjet" text="Créer un projet" />
+          <Label layoutX="175.0" layoutY="4.0" style="-fx-font-size: 24px; -fx-padding: 10;" text="Gestion des projets" />
+          <TableView fx:id="tableProjets" layoutX="20.0" layoutY="121.0" prefHeight="232.0" prefWidth="562.0">
+            <columns>
+              <TableColumn fx:id="colTitre" prefWidth="250.0" text="Titre" />
+              <TableColumn fx:id="colEtat" minWidth="0.0" prefWidth="92.0" text="Etat" />
+                <TableColumn fx:id="colDeadline" prefWidth="219.0" text="Deadline" />
+            </columns>
+          </TableView>
+          <Button layoutX="219.0" layoutY="75.0" mnemonicParsing="false" onAction="#modifierProjet" text="Modifier un projet" />
+          <Button layoutX="290.0" layoutY="360.0" mnemonicParsing="false" onAction="#supprimerProjet" text="Supprimer ce projet" />
+          <Button layoutX="159.0" layoutY="360.0" mnemonicParsing="false" onAction="#voirTaches" text="Voir les tâches" />
+          <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#Retour" text="(- Retour" />
+       </children>
+    </AnchorPane>
