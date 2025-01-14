@@ -30,8 +30,11 @@ public class Projet {
     public void setTitre(String Titre) {
         this.Titre = Titre;
     }
-    public boolean getEtat() {
-        return Etat;
+    public String getEtat() {
+        if (Etat) {
+            return "Complété";
+        }
+        return "Incomplet";
     }
     public ArrayList<Tache> getTaches() {
         return ListeTache;
@@ -57,6 +60,10 @@ public class Projet {
 
 
     public void attribuerRole(Employe employe, Tache tache) {
+        if (!employe.getListeRoles().containsKey(this)) {
+            employe.getListeRoles().put(this, new ArrayList<>());
+        }
+        employe.getTaches(this).add(tache);
         tache.getEmployes().add(employe);
     }
 

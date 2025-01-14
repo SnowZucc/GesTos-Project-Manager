@@ -9,7 +9,7 @@ public class Tache {
     private boolean Etat = false; // Etat (terminé ou non) d'une tâche
     private String Priorite; // Prioritaire, Urgent, Secondaire, Non Urgent
     public Projet projet;
-    private ArrayList<Employe> ListeEmploye;
+    private ArrayList<Employe> ListeEmploye = new ArrayList();
 
     public Tache(String titre, String description, String Priorite) {
         this.Titre = titre;

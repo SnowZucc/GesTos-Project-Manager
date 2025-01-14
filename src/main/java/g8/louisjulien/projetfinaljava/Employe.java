@@ -27,6 +27,7 @@ public class Employe {
     public LocalDateTime getDateEmbauche() {
         return DateEmbauche;
     }
+    public HashMap<Projet, List<Tache>> getListeRoles() {return listeRoles;}
     public Set<Projet> getProjets() {
         return listeRoles.keySet();
     }
@@ -50,15 +51,16 @@ public class Employe {
 
     public List<String[]> getHistorique() {     // Modification pour retourner une liste
         List<String[]> historiqueList = new ArrayList<>();
-
+        System.out.println("HISTORIQUE DE " + this.getNom());
         for (Projet projet : this.getProjets()) {
-            if (projet.getEtat()) {
+            if (projet.getEtat().equals("Complété")) {
+                System.out.println("Projet : " + projet.getTitre());
                 for (Tache tache : this.getTaches(projet)) {
-                    historiqueList.add(new String[]{projet.getTitre(), tache.toString()});
+                    System.out.println("\tTâche : " + tache.getTitre());
+                    historiqueList.add(new String[]{projet.getTitre(), tache.getTitre()});
                 }
             }
         }
-        System.out.println(historiqueList);
         return historiqueList;
     }
 
