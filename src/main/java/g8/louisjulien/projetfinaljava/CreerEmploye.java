@@ -24,11 +24,9 @@ public class CreerEmploye {
         String nom = Nom.getText();
         LocalDate date = dateEmbauche.getValue();
 
-        // Convertir LocalDate en LocalDateTime
-        LocalDateTime dateTimeEmbauche = date.atStartOfDay();   // A enlever et changer en LocalDate seul
 
         // Créer l'employé
-        Employe nouvelEmploye = new Employe(nom, dateTimeEmbauche);
+        Employe nouvelEmploye = new Employe(nom, date);
         System.out.println("Employé créé : " + nouvelEmploye.getNom() + " " + nouvelEmploye.getDateEmbauche());
         changerScene(event, "employes.fxml");
     }

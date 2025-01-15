@@ -25,10 +25,10 @@ public class Main extends Application{
     }
 
     public static void main(String[] args) {
-        Employe e1 = new Employe("Jean Marc", LocalDateTime.now());
-        Employe e2 = new Employe("John Doe", LocalDateTime.now());
-        Employe e3 = new Employe("Cécile Dupuis", LocalDateTime.now());
-        Employe e4 = new Employe("Philippe Etchebest", LocalDateTime.now());
+        Employe e1 = new Employe("Jean Marc", LocalDate.now());
+        Employe e2 = new Employe("John Doe", LocalDate.now());
+        Employe e3 = new Employe("Cécile Dupuis", LocalDate.now());
+        Employe e4 = new Employe("Philippe Etchebest", LocalDate.now());
 
 
         Projet p1 = new Projet("Projet1", LocalDate.of(2025, 1, 10));

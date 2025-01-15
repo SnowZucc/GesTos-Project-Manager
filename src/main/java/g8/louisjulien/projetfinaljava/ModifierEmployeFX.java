@@ -30,10 +30,9 @@ public class ModifierEmployeFX {
         LocalDate date = dateEmbauche.getValue();
 
         // Convertir LocalDate en LocalDateTime
-        LocalDateTime dateTimeEmbauche = date.atStartOfDay();   // A enlever et changer en LocalDate seul
 
         // Modifier l'employé
-        Employe.modifierEmploye(employe, employeEcrit, dateTimeEmbauche);
+        Employe.modifierEmploye(employe, employeEcrit, date);
         System.out.println("Employé modifié : " + employe.getNom() + " " + employe.getDateEmbauche());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Récupère la fenêtre courante
         stage.close();
