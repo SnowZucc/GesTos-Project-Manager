@@ -19,6 +19,7 @@ public class Projet {
         this.Deadline = Deadline;
 
         ListeProjets.add(this);
+        //DatabaseManager.addProjet(Titre, Deadline, Etat);
     }
 
     public static List<Projet> getListeProjets() {

@@ -55,6 +55,22 @@ public class Main extends Application {
         t1_3.setStatut(4);
         System.out.println("Etat du projet1 APRES update : " + p1.getEtat());
 
+//        // La doc : https://github.com/xerial/sqlite-jdbc et https://sqlite.fr/languages/java/
+//        DatabaseManager.initializeDatabase(); // Initialiser la base de données
+//
+//        // Récupérer et afficher les projets
+//        List<Projet> projets = DatabaseManager.getAllProjets();
+//        for (Projet projet : projets) {
+//            System.out.println("Projet : " + projet.getTitre() + ", Deadline : " + projet.getDeadline());
+//        }
+//
+//        // Récupérer et afficher les tâches du projet 1
+//        List<Tache> taches = DatabaseManager.getTachesByProjetId(1);
+//        for (Tache tache : taches) {
+//            System.out.println("Tâche : " + tache.getTitre() + ", Description : " + tache.getDescription());
+//
+//
         launch(args); // Lance l'application JavaFX
+//        }
     }
 }
