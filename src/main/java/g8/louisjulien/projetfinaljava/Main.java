@@ -31,10 +31,10 @@ public class Main extends Application{
         Employe e4 = new Employe("Philippe Etchebest", LocalDate.now());
 
 
-        Projet p1 = new Projet("Projet1", LocalDate.of(2025, 1, 10));
-        Tache t1_1 = new Tache("P1Tâche1", "Faire les classes java.", "Urgent");
-        Tache t1_2 = new Tache("P1Tâche2", "Faire les interfaces.", "Secondaire");
-        Tache t1_3 = new Tache("P1Tâche3", "Faire le diagramme UML.", "Prioritaire");
+        Projet p1 = new Projet("Faire l'application Java", LocalDate.of(2025, 1, 16));
+        Tache t1_1 = new Tache("POO", "Faire les classes de la POO", "Urgent");
+        Tache t1_2 = new Tache("Dashboard", "Faire le dashboard graphique", "Prioritaire");
+        Tache t1_3 = new Tache("CSS", "Rendre joli grâce au CSS", "Secondaire");
         p1.ajouterTacheProjet(t1_1);
         p1.attribuerRole(e1, t1_1);
         p1.attribuerRole(e2, t1_1);
@@ -46,10 +46,10 @@ public class Main extends Application{
         p1.attribuerRole(e3, t1_3);
 
 
-        Projet p2 = new Projet("Projet2", LocalDate.of(2025, 1, 17));
-        Tache t2_1 = new Tache("P1Tâche1", "Faire le rapport.", "Prioritaire");
-        Tache t2_2 = new Tache("P1Tâche2", "Faire le texte", "Urgent");
-        Tache t2_3 = new Tache("P1Tâche3", "Faire le powerpoint.", "Secondaire");
+        Projet p2 = new Projet("Détruire l'ISEP", LocalDate.of(2025, 3, 23));
+        Tache t2_1 = new Tache("Attaque", "Planifier l'attaque", "Urgent");
+        Tache t2_2 = new Tache("Reconnaissance", "Chercher les failles", "Prioritaire");
+        Tache t2_3 = new Tache("Bombe", "Fabriquer la bombe", "Secondaire");
         p2.ajouterTacheProjet(t2_1);
         p2.attribuerRole(e1, t2_1);
         p2.attribuerRole(e2, t2_1);
@@ -66,8 +66,8 @@ public class Main extends Application{
 
 //        TEST getHistorique()
         t1_1.setStatut(4);
-        t1_2.setStatut(4);
-        t1_3.setStatut(4);
+        t1_2.setStatut(3);
+        t1_3.setStatut(1);
         System.out.println(e1.getHistorique());
         System.out.println(e2.getHistorique());
         System.out.println(e3.getHistorique());
@@ -81,7 +81,7 @@ public class Main extends Application{
         System.out.println("Etat de la tâche 1 APRES update : " + t1_1.getEtat());
 
         t1_2.setStatut(4);
-        t1_3.setStatut(4);
+        t1_3.setStatut(2);
         System.out.println("Etat du projet1 APRES update : " + p1.getEtat());
 
         launch(args); // Lance l'application JavaFX
