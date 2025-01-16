@@ -1,0 +1,156 @@
+/* Styles généraux */
+.root { /* Fond et police globale de la fenêtre principale */
+    -fx-background-color: #f5f6fa; /* Couleur de fond */
+    -fx-font-family: 'Segoe UI', Arial, sans-serif; /* Police de caractères */
+}
+
+/* Style des boutons */
+.button { /* Boutons */
+    -fx-background-color: #4834d4; /* Couleur de fond par défaut */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-padding: 8 15; /* Marges internes (haut/bas, gauche/droite) */
+    -fx-border-radius: 5; /* Coins arrondis des bordures */
+    -fx-background-radius: 5; /* Coins arrondis du fond */
+    -fx-cursor: hand; /* Curseur en main au survol */
+    -fx-font-size: 13px; /* Taille de la police */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 2); /* Ombre légère */
+    -fx-transition: all 0.3s; /* Transition sur les changements */
+}
+
+.button:hover { /* Boutons au survol */
+    -fx-background-color: #686de0; /* Couleur de fond */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 3); /* Ombre renforcée */
+}
+
+/* Style des labels */
+.label { /* Étiquettes de texte */
+    -fx-text-fill: #2d3436; /* Couleur du texte */
+    -fx-font-weight: bold; /* Texte en gras */
+}
+
+/* Style des TableView */
+.table-view { /* TableView globale */
+    -fx-background-color: transparent; /* Fond transparent */
+    -fx-border-color: #dfe6e9; /* Couleur de la bordure */
+    -fx-border-radius: 5; /* Coins arrondis de la bordure */
+    -fx-padding: 0; /* Pas de marges internes */
+}
+
+.table-view .column-header-background { /* Fond des en-têtes de colonnes */
+    -fx-background-color: #4834d4; /* Couleur de fond */
+    -fx-background-radius: 5 5 0 0; /* Coins arrondis en haut */
+    -fx-padding: 5; /* Marges internes */
+}
+
+.table-view .column-header { /* En-têtes de colonnes */
+    -fx-background-color: transparent; /* Fond transparent */
+}
+
+.table-view .column-header .label { /* Texte des en-têtes de colonnes */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-weight: bold; /* Texte en gras */
+}
+
+.table-view .table-cell { /* Cellules de la TableView */
+    -fx-alignment: center-left; /* Alignement du contenu à gauche */
+    -fx-padding: 10 15; /* Marges internes */
+}
+
+.table-row-cell { /* Rangées de la TableView */
+    -fx-background-color: white; /* Couleur de fond */
+    -fx-border-color: transparent; /* Bordures transparentes */
+    -fx-table-cell-border-color: transparent; /* Bordures des cellules transparentes */
+}
+
+.table-row-cell:hover { /* Rangées au survol */
+    -fx-background-color: #f1f2f6; /* Couleur de fond */
+}
+
+.table-row-cell:selected { /* Rangées sélectionnées */
+    -fx-background-color: #cfe2f3; /* Couleur de fond */
+}
+
+/* Style des TextField */
+.text-field { /* Champs de texte */
+    -fx-background-color: white; /* Couleur de fond */
+    -fx-border-color: #dfe6e9; /* Couleur de la bordure */
+    -fx-border-radius: 5; /* Coins arrondis */
+    -fx-padding: 5 10; /* Marges internes */
+}
+
+.text-field:focused { /* Champs de texte en focus */
+    -fx-border-color: #4834d4; /* Couleur de la bordure */
+}
+
+/* Style des DatePicker */
+.date-picker { /* Sélecteurs de date */
+    -fx-background-color: white; /* Couleur de fond */
+    -fx-border-color: #dfe6e9; /* Couleur de la bordure */
+    -fx-border-radius: 5; /* Coins arrondis */
+}
+
+.date-picker:focused { /* Sélecteurs de date en focus */
+    -fx-border-color: #4834d4; /* Couleur de la bordure */
+}
+
+/* Animations */
+.button { /* Boutons avec transition */
+    -fx-transition: all 0.2s ease-out; /* Transition douce */
+}
+
+/* Style spécifique pour le bouton retour */
+.button:contains("Retour") { /* Bouton avec texte retour */
+    -fx-background-color: #636e72; /* Couleur de fond */
+}
+
+.button:contains("Retour"):hover { /* Bouton retour au survol */
+    -fx-background-color: #2d3436; /* Couleur de fond */
+}
+
+/* Style pour les boutons de suppression */
+.button:contains("Supprimer") { /* Bouton avec texte supprimer */
+    -fx-background-color: #d63031; /* Couleur de fond */
+}
+
+.button:contains("Supprimer"):hover { /* Bouton supprimer au survol */
+    -fx-background-color: #ff4757; /* Couleur de fond */
+}
+
+
+/* Style des mnenubutton */
+.menu-button {
+    -fx-background-color: #4834d4; /* Couleur de fond */
+    -fx-text-fill: white !important; /* Force la couleur du texte à blanc */
+    -fx-border-radius: 5; /* Coins arrondis des bordures */
+    -fx-background-radius: 5; /* Coins arrondis du fond */
+    -fx-font-size: 12px; /* Taille de la police */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 2); /* Ombre légère */
+}
+
+.menu-button:hover { /* MenuButton au survol */
+    -fx-background-color: #686de0; /* Couleur de fond */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 3); /* Ombre renforcée */
+}
+
+/* Cible le texte des MenuButton */
+.menu-button * {
+    -fx-text-fill: white !important; /* Force la couleur du texte à blanc */
+}
+
+/* Style des éléments du menu à l'intérieur du MenuButton */
+.menu-button .menu-item {
+    -fx-background-color: #4834d4; /* Couleur de fond des éléments du menu (bleu) */
+    -fx-text-fill: white; /* Texte blanc dans les éléments du menu */
+    -fx-padding: 5 10; /* Espacement interne */
+    -fx-font-size: 12px; /* Taille de la police des éléments du menu */
+}
+
+/* Style au survol des éléments du menu */
+.menu-button .menu-item:hover {
+    -fx-background-color: #686de0; /* Couleur de fond au survol (bleu plus foncé) */
+}
+
+/* Style pour l'élément du menu sélectionné */
+.menu-button .menu-item:selected {
+    -fx-background-color: #1f618d; /* Couleur de fond pour l'élément sélectionné */
+}

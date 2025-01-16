@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="1075.0" stylesheets="@../css.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="louisjulien.gestos.Controlleurs.Taches.VueKanbanFX">
+   <children>
+       <Label layoutX="442.0" style="-fx-font-size: 24px; -fx-padding: 10;" text="GesTos Kanban" />
+      <HBox layoutX="12.0" layoutY="64.0" prefWidth="1052.0" spacing="20">
+         <children>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="245.0" text="En attente" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colEnAttente" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="249.0" text="En cours" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colEnCours" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="247.0" text="En Test">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colEnTest" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="247.0" text="Terminé">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="colTermine" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

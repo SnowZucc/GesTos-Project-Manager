@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="louisjulien.gestos.Controlleurs.Taches.ModifierTacheFX">
+   <children>
+      <Label layoutX="192.0" layoutY="14.0" text="Modifier une tache">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Titre" layoutX="212.0" layoutY="98.0" prefHeight="25.0" prefWidth="174.0" promptText="Nouveau titre" />
+      <TextField fx:id="Priorite" layoutX="212.0" layoutY="236.0" prefHeight="25.0" prefWidth="174.0" promptText="Nouvelle priorité" />
+      <TextField fx:id="Description" layoutX="212.0" layoutY="145.0" prefHeight="25.0" prefWidth="174.0" promptText="Nouvelle  description" />
+      <TextField fx:id="Status" layoutX="212.0" layoutY="191.0" prefHeight="25.0" prefWidth="174.0" promptText="Nouveau Statut" />
+      <ButtonBar layoutX="180.0" layoutY="285.0" prefHeight="40.0" prefWidth="200.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#Valider" text="Valider" />
+            <Button mnemonicParsing="false" onAction="#Annuler" text="Annuler" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

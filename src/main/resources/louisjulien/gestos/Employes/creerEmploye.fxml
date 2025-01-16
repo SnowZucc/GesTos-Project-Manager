@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="434.0" stylesheets="@../css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="louisjulien.gestos.Controlleurs.Employes.CreerEmploye">
+   <children>
+      <Label layoutX="123.0" layoutY="14.0" text="Créer un employé">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Nom" layoutX="127.0" layoutY="68.0" prefHeight="25.0" prefWidth="174.0" promptText="Nom" />
+      <DatePicker fx:id="dateEmbauche" layoutX="127.0" layoutY="104.0" prefHeight="25.0" prefWidth="174.0" promptText="Date d'embauche" />
+      <Button layoutX="149.0" layoutY="150.0" mnemonicParsing="false" onAction="#Valider" text="Valider" />
+      <Button layoutX="226.0" layoutY="150.0" mnemonicParsing="false" onAction="#Annuler" text="Annuler" />
+   </children>
+</AnchorPane>
