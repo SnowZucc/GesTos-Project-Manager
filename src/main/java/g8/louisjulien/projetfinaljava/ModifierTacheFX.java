@@ -43,18 +43,7 @@ public class ModifierTacheFX {
 
     @FXML
     private void Annuler(ActionEvent event) {
-        changerScene(event, "projets.fxml");
-    }
-
-    private void changerScene(ActionEvent event, String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Scene scene = new Scene(loader.load());
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Récupère la fenêtre courante
+        stage.close();
     }
 }

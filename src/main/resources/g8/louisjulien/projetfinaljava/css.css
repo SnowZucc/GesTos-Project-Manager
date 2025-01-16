@@ -116,3 +116,41 @@
     -fx-background-color: #ff4757; /* Couleur de fond */
 }
 
+
+/* Style des mnenubutton */
+.menu-button {
+    -fx-background-color: #4834d4; /* Couleur de fond */
+    -fx-text-fill: white !important; /* Force la couleur du texte à blanc */
+    -fx-border-radius: 5; /* Coins arrondis des bordures */
+    -fx-background-radius: 5; /* Coins arrondis du fond */
+    -fx-font-size: 12px; /* Taille de la police */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 2); /* Ombre légère */
+}
+
+.menu-button:hover { /* MenuButton au survol */
+    -fx-background-color: #686de0; /* Couleur de fond */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 3); /* Ombre renforcée */
+}
+
+/* Cible le texte des MenuButton */
+.menu-button * {
+    -fx-text-fill: white !important; /* Force la couleur du texte à blanc */
+}
+
+/* Style des éléments du menu à l'intérieur du MenuButton */
+.menu-button .menu-item {
+    -fx-background-color: #4834d4; /* Couleur de fond des éléments du menu (bleu) */
+    -fx-text-fill: white; /* Texte blanc dans les éléments du menu */
+    -fx-padding: 5 10; /* Espacement interne */
+    -fx-font-size: 12px; /* Taille de la police des éléments du menu */
+}
+
+/* Style au survol des éléments du menu */
+.menu-button .menu-item:hover {
+    -fx-background-color: #686de0; /* Couleur de fond au survol (bleu plus foncé) */
+}
+
+/* Style pour l'élément du menu sélectionné */
+.menu-button .menu-item:selected {
+    -fx-background-color: #1f618d; /* Couleur de fond pour l'élément sélectionné */
+}

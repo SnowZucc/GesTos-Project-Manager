@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -65,11 +66,18 @@ public class EmployeFX {
         ouvrirNouvelleFenetre("Historique.fxml");
     }
 
-    private void changerScene(ActionEvent event, String fxmlFile) {
+    private void changerScene(ActionEvent event, String fxmlFile) {         // Pareil que pour EmployesFX, légèrement modifiée
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             Scene scene = new Scene(loader.load());
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            Stage stage;
+            if (event.getSource() instanceof Node) {
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            } else {
+                stage = (Stage) tableEmployes.getScene().getWindow();
+            }
+
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

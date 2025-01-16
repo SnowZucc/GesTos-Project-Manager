@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -104,11 +105,18 @@ public class ProjetsFX {
             }
     }
 
-    private void changerScene(ActionEvent event, String fxmlFile) {
+    private void changerScene(ActionEvent event, String fxmlFile) {     // Fonction légèrement modifiée pour gérer le cas de MenuItem
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             Scene scene = new Scene(loader.load());
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            Stage stage;
+            if (event.getSource() instanceof Node) {
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();     // Si l'événement est déclenché par un Node (un Bouton quoi)
+            } else {
+                stage = (Stage) tableProjets.getScene().getWindow();                    // Si l'événement est déclenché par un MenuItem ou autre
+            }
+
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

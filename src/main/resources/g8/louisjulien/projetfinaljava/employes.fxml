@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,17 +18,13 @@
         </columns>
       </TableView>
       <Button layoutX="27.0" layoutY="11.0" mnemonicParsing="false" onAction="#Retour" text="(- Retour" />
-      <ButtonBar layoutX="7.0" layoutY="55.0" prefHeight="40.0" prefWidth="354.0">
-         <buttons>
-            <Button mnemonicParsing="false" onAction="#creerEmploye" prefHeight="34.0" prefWidth="200.0" text="Créer un employé" />
-            <Button mnemonicParsing="false" onAction="#modifierEmploye" text="Modifier un employé" />
-         </buttons>
-      </ButtonBar>
-      <ButtonBar layoutX="1.0" layoutY="360.0" prefHeight="40.0" prefWidth="406.0">
-         <buttons>
-            <Button mnemonicParsing="false" onAction="#afficherHistorique" text="Historique" />
-            <Button minWidth="4.0" mnemonicParsing="false" onAction="#supprimerEmploye" prefHeight="34.0" text="Supprimer" />
-         </buttons>
-      </ButtonBar>
+      <MenuButton layoutX="28.0" layoutY="61.0" mnemonicParsing="false" text="Employé">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#creerEmploye" text="Créer" />
+          <MenuItem mnemonicParsing="false" onAction="#modifierEmploye" text="Modifier" />
+            <MenuItem mnemonicParsing="false" onAction="#supprimerEmploye" text="Supprimer" />
+        </items>
+      </MenuButton>
+      <Button layoutX="256.0" layoutY="362.0" mnemonicParsing="false" onAction="#afficherHistorique" text="Historique" />
    </children>
 </AnchorPane>
