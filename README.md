@@ -1,5 +1,6 @@
 # GesTos Project Manager
 Application de gestion de projets collaborative.
+
 Les fonctionnalités de cette application sont :
 
 ### Gestion du personnel :
